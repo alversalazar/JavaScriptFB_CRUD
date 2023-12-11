@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      </head>
+      <body>
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">     </a>
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+   <!--Ingresar en el head del index.html-->
+<script type="module" src="firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- BOOTSWATCH -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/vapor/bootstrap.min.css"
+    />
+  </head>
+
+  <h1 style="text-align: center;">Crud con Firebase JS</h1>
+
+  <body class="bg-dark">
+    <!-- ADD TASK -->
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+                
+              <h1 class="h4">Career</h1>
+
+      
+                <form id="task-form">
+                    <label for="idCareer">IdCareer:</label>
+                    <input
+                      type="text"
+                      id="task-idCareer"
+                      class="form-control mb-3"
+                      class="My First idCareer"
+                      placeholder="Task idCareer"
+                      autofocus
+                    />
+    
+                
+
+                <label for="name">Name:</label>
+                <input
+                  id="task-name"
+                  class="form-control mb-3"
+                  placeholder="Task Name"
+                  />
+
+                <label for="duration">Duration:</label>
+                <input
+                  id="task-duration"
+                  class="form-control mb-3"
+                  placeholder="Task duration"
+                  />
+
+                <label for="description">Description:</label>
+                <input
+                  id="task-description"
+                  class="form-control mb-3"
+                  placeholder="Task Description"
+                  />
+
+                
+                  <label for="status">Status:</label>
+                  <input
+                    id="task-status"
+                    type="checkbox" 
+                  
+                  />
+                  
+                  <button class="btn btn-primary" id="btn-task-form">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Tasks List -->
+        <div class="col-md-6" id="tasks-container"></div>
+      </div>
+    </div>
+
+    <!-- CUSTOM CODE -->
+    <script type="module" src="./index.js" ></script>
+  </body>
+</html>
